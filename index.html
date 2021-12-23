@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>瀑布</title>
+		<style type="text/css">
+      	.image_list{
+               text-align:center;
+               margin:0px auto;
+               
+               width:425px;
+			   height: 825px;
+        }
+        #p2{
+        	
+        	
+  			
+        }
+        #p3{
+        	
+        	display: none;
+        	
+        }
+       #p4{
+       	
+       	position: relative;
+		left: -120px;
+		top: 540px;
+		opacity: 0;
+		animation:moveout1 8s ease forwards;
+       }
+       #p5{
+       	display: none;
+       	position: relative;
+		left:100px;
+		top: 780px;
+		animation:moveout2 8s ease forwards;
+       }
+        @keyframes moveout1{
+      	0% {opacity: 0; }
+	20%{opacity: 0.1;}
+	50% {opacity: 0.4; }
+	70%{opacity: 0.6;}
+	100% {opacity: 1;}
+ }
+ @keyframes moveout2{
+      	0% {opacity: 0; }
+	20%{opacity: 0.1;}
+	50% {opacity: 0.4; }
+	70%{opacity: 0.6;}
+	100% {opacity: 1;}
+ }
+     
+    </style>
+	</head>
+	<body>
+		<script>
+      function picView1() {
+        document.getElementById("p2").style.display="block";
+        document.getElementById("p4").style.display="block";
+        document.getElementById("p1").style.display="none";
+      }
+      function picView2() {
+      	document.getElementById("p5").style.display="block";
+        document.getElementById("p3").style.display="block";
+        document.getElementById("p2").style.display="none";
+        document.getElementById("p4").style.display="none";
+      }
+		
+      
+	</script>
+		<div class="image_list">
+		<div id="p4">	<img src="img/pubuzi.png" width="15%" height="5%"/></div>
+		<div id="p5">	<img src="img/bailuzi.png" width="30%" height="40%"/></div>
+		
+		<div id="p2">	<img src="img/pubu.png" width="425px" height="825px" onclick="picView2()"/></div>
+		<div id="p3">	<img src="img/bailu.png" width="425px" height="825px" /></div>
+		
+		</div>
+	</body>
+</html>
